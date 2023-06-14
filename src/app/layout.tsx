@@ -32,7 +32,7 @@ const RootLayout = ({children}: { children: React.ReactNode }) => {
         // MOST CLASSES TO HIDE TOOLBAR MOBILE
         <html lang="en" className={`scroll-smooth overflow-hidden sm:overflow-auto w-full ${fontClasses}`}>
         <Utils>
-            <body className="bg-gray-900 h-full w-full fixed overflow-y-scroll sm:static sm:overflow-auto">
+            <body className="bg-white h-full w-full fixed overflow-y-scroll sm:static sm:overflow-auto">
             {children}
             </body>
         </Utils>

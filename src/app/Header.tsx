@@ -14,7 +14,8 @@ const Header = () => {
             <ParallaxBanner id="header" className="h-screen" layers={[
                 {
                     children: (
-                        <video autoPlay loop muted playsInline className="h-screen w-screen object-cover object-center">
+                        <video autoPlay loop muted playsInline
+                               className="w-full h-[120%] md:h-full object-cover object-center">
                             <source src="/clip.mp4"/>
                         </video>
                     ),

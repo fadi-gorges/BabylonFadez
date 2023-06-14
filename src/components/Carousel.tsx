@@ -56,8 +56,8 @@ const Carousel = ({name, srcSet, autoScroll = false, hideButtons = false}: {
                 <div id={`${name}-carousel`} className="carousel w-full h-full rounded-3xl touch-none">
                     {srcSet.map((src, index) => (
                         <div id={name + index} key={src} className="carousel-item relative w-full">
-                            <Image key={src} src={src} alt="Carousel Image" width={800} height={800}
-                                   className="w-full aspect-[6/4] object-cover object-center touch-none"/>
+                            <Image key={src} src={src} alt="Carousel Image" fill sizes="90vw, 60vw"
+                                   className="w-full object-cover object-center touch-none"/>
                             {!hideButtons && <div
                                 className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <button onClick={() => scrollCarousel((index === 0 ? srcSet.length - 1 : index - 1))}
