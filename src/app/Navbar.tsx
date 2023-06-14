@@ -21,7 +21,7 @@ const Navbar = ({scroll}: { scroll: number }) => {
             </button>
         );
     };
-    
+
     const MobileNavLink = ({text, to}: { text: string, to: string }) => (
         <li>
             <button onClick={() => scrollIntoView(to)}>{text}</button>
@@ -48,8 +48,7 @@ const Navbar = ({scroll}: { scroll: number }) => {
             </nav>
             <nav className={`md:hidden fixed top-0 w-full flex justify-between items-center z-10 bg-black/90 px-5
                 backdrop-blur-md text-gray-200`}>
-                <Image className="" src={logo} alt="Logo" width={70} height={70}
-                       priority/>
+                <Image className="" src={logo} alt="Logo" width={70} height={70} priority/>
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost btn-circle btn-md">
                         <Bars3Icon height={30}/>

@@ -20,7 +20,7 @@ const TheTeam = () => {
                         <div className='grid grid-cols-3 h-full gap-x-2'>
                             {teamImgs.map((src, index) => (
                                 <div key={src} className='col-auto'>
-                                    <Image src={src} alt="Haircut" width={400} height={600}
+                                    <Image src={src} alt="Haircut" width={400} height={600} priority
                                            className="rounded-3xl border-2 object-cover slideIn h-full"
                                            style={{transitionDelay: `${imgDelay[index]}ms`}}/>
                                 </div>
