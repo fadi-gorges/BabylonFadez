@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .slideIn {
+        @apply translate-y-10 opacity-0 transition duration-700
+    }
+
+    .show {
+        @apply translate-y-0 opacity-100
+    }
+
+    @keyframes slideInFromBottom {
+        0% {
+            transform: translateY(10%);
+            @apply opacity-0
+        }
+        100% {
+            @apply translate-y-0 opacity-100
+        }
+    }
+
+    .slideInFirst {
+        animation: 0.5s ease-out 0s 1 slideInFromBottom;
+    }
+
+    .dashedBorder {
+        @apply relative before:absolute before:w-full before:-top-0.5 before:left-0 before:h-4 before:border-t-[3px]
+        before:border-dashed
+    }
+
+    .linkUnderline {
+        @apply relative after:absolute after:bg-white/80 after:w-0 after:h-[1px] after:top-[1.3rem] after:left-1/2
+        after:duration-500 hover:after:w-full hover:after:left-0
+    }
+
+    .titleUnderline, .titleUnderlineRight {
+        @apply relative after:absolute after:w-10 after:h-0.5 after:top-full after:left-0 after:bg-yellow-600
+    }
+
+    .titleUnderlineRight {
+        @apply xl:after:left-auto xl:after:right-0
+    }
+}
