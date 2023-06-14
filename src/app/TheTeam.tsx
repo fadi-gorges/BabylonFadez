@@ -19,8 +19,8 @@ const TheTeam = () => {
                         className="row-start-2 xl:row-auto col-span-12 xl:col-span-7 h-80 lg:h-[500px] py-3">
                         <div className='grid grid-cols-3 h-full gap-x-2'>
                             {teamImgs.map((src, index) => (
-                                <div className='col-auto'>
-                                    <Image key={src} src={src} alt="Haircut" width={400} height={600}
+                                <div key={src} className='col-auto'>
+                                    <Image src={src} alt="Haircut" width={400} height={600}
                                            className="rounded-3xl border-2 object-cover slideIn h-full"
                                            style={{transitionDelay: `${imgDelay[index]}ms`}}/>
                                 </div>

@@ -21,7 +21,6 @@ const Navbar = ({scroll}: { scroll: number }) => {
             </button>
         );
     };
-
     
     const MobileNavLink = ({text, to}: { text: string, to: string }) => (
         <li>
