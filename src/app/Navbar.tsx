@@ -22,6 +22,7 @@ const Navbar = ({scroll}: { scroll: number }) => {
         );
     };
 
+    
     const MobileNavLink = ({text, to}: { text: string, to: string }) => (
         <li>
             <button onClick={() => scrollIntoView(to)}>{text}</button>
