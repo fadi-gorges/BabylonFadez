@@ -43,7 +43,7 @@ const Services = () => {
                 className="container mx-auto px-10 md:px-28 py-16 md:py-20">
                 <div className="grid grid-cols-12 gap-y-8">
                     <div className="col-span-12 xl:col-span-5 text-black flex flex-col justify-center">
-                        <h2 className="text-2xl text-gray-400 font-bungee font-semibold titleUnderline after:bg-white slideIn">Services</h2>
+                        <h2 className="text-2xl text-gray-400 font-josefin font-extrabold titleUnderline after:bg-white slideIn">Services</h2>
                         <p className="text-base text-white  mt-5 md:mt-10 font-judson leading-8 slideIn xl:delay-100">
                             We offer a range of services to help you look and feel your best. Whether you need a
                             haircut, a shave, a beard or eyebrow trim, we have you covered. Check our prices for your

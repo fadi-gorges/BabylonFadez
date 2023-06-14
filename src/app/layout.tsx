@@ -1,6 +1,6 @@
 import "@styles/globals.css";
 import Utils from "@components/Utils";
-import {Bungee, Judson, Libre_Bodoni} from 'next/font/google';
+import {Bungee, Josefin_Sans, Judson, Libre_Bodoni} from 'next/font/google';
 
 const libre = Libre_Bodoni({
     subsets: ['latin'],
@@ -14,13 +14,21 @@ const bungee = Bungee({
     weight: ['400'],
     variable: '--font-bungee'
 })
+
 const judson = Judson({
     subsets: ['latin'],
     display: 'swap',
     weight: ['400', '700'],
     variable: '--font-judson'
 })
-const fontClasses = `${libre.variable} ${bungee.variable} ${judson.variable}`
+
+const josefin = Josefin_Sans({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-josefin'
+})
+
+const fontClasses = `${libre.variable} ${bungee.variable} ${judson.variable} ${josefin.variable}`
 
 export const metadata = {
     title: "Babylon Fadez",

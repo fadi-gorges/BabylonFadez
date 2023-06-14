@@ -11,6 +11,7 @@ module.exports = {
                 libre: ["var(--font-libre)", 'sans'],
                 bungee: ["var(--font-bungee)", 'sans'],
                 judson: ["var(--font-judson)", 'sans'],
+                josefin: ["var(--font-josefin)", 'sans'],
             },
             fontSize: {
                 sm: ["clamp(1.00rem, calc(0.92rem + 0.39vw), 1.20rem)", "1.4"],

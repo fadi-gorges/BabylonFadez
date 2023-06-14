@@ -40,7 +40,7 @@ const ContactCollapse = ({location, currentLocation}: {
         <input id={`location-${location.location}`} type="checkbox"
                checked={currentLocation.location === location.location}
                onClick={() => currentLocation.setLocation(location.location)}/>
-        <div className="collapse-title text-base font-medium font-bungee text-gray-700">
+        <div className="collapse-title text-base font-josefin font-extrabold text-gray-700">
             {location.location}
         </div>
         <div className="collapse-content flex flex-col gap-3">
@@ -74,7 +74,7 @@ const Contact = () => {
                     <div
                         className="col-span-12 xl:col-span-5 text-black flex flex-col">
                         <div
-                            className="flex justify-between items-center text-2xl font-bungee font-semibold text-yellow-400 slideIn">
+                            className="flex justify-between items-center text-2xl font-josefin font-extrabold text-yellow-400 slideIn">
                             <h2 className="titleUnderline after:bg-white">Contact Us</h2>
                             <div className="flex gap-3">
                                 <a href="https://www.instagram.com/babylonfadezbarbershop">

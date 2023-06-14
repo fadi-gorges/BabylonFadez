@@ -29,9 +29,9 @@ const ourWorkImgs = [
 
 const OurWork = () => {
     return (
-        <div id="our-work" className="bg-white scroll-mt-20 py-10 lg:py-20 w-full">
+        <div id="our-work" className="bg-white scroll-mt-20 py-10 lg:py-24 w-full">
             <div className="container mx-auto px-10 md:px-28 mb-10 flex xl:justify-end slideIn">
-                <h2 className="text-2xl font-bungee font-semibold text-black titleUnderlineRight">
+                <h2 className="text-2xl font-josefin font-extrabold text-black titleUnderlineRight">
                     Our Work
                 </h2>
             </div>

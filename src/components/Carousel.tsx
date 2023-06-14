@@ -51,7 +51,8 @@ const Carousel = ({name, srcSet, autoScroll = false, hideButtons = false}: {
     };
 
     return (
-        <div className="h-full flex flex-col">
+        <div className="h-full flex flex-col relative">
+            <div className="absolute left-0 top-0 w-full h-[90%] z-10"/>
             <StackDecor>
                 <div id={`${name}-carousel`} className="carousel w-full h-full rounded-3xl touch-none">
                     {srcSet.map((src, index) => (
