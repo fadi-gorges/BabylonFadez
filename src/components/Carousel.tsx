@@ -3,7 +3,12 @@ import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import StackDecor from "@components/StackDecor";
 
-const Carousel = ({name, autoScroll = false, srcSet}: { name: string, autoScroll?: boolean, srcSet: string[] }) => {
+const Carousel = ({name, srcSet, autoScroll = false, hideButtons = false}: {
+    name: string,
+    srcSet: string[],
+    autoScroll?: boolean,
+    hideButtons?: boolean
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentTimeout, setCurrentTimeout] = useState<NodeJS.Timeout>();
 
@@ -53,7 +58,7 @@ const Carousel = ({name, autoScroll = false, srcSet}: { name: string, autoScroll
                         <div id={name + index} key={src} className="carousel-item relative w-full">
                             <Image key={src} src={src} alt="Carousel Image" fill
                                    className="w-full object-cover object-center touch-none"/>
-                            <div
+                            {!hideButtons && <div
                                 className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                                 <button onClick={() => scrollCarousel((index === 0 ? srcSet.length - 1 : index - 1))}
                                         className="btn btn-circle">❮
@@ -61,7 +66,7 @@ const Carousel = ({name, autoScroll = false, srcSet}: { name: string, autoScroll
                                 <button onClick={() => scrollCarousel((index === srcSet.length - 1 ? 0 : index + 1))}
                                         className="btn btn-circle">❯
                                 </button>
-                            </div>
+                            </div>}
                         </div>
                     ))}
                 </div>

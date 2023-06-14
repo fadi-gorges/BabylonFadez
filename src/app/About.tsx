@@ -39,7 +39,7 @@ const About = () => {
                         {/*</button>*/}
                     </div>
                     <div className="col-span-12 xl:col-start-7 xl:col-span-6 h-80 lg:h-[500px] slideIn xl:delay-200">
-                        <Carousel name="about" srcSet={aboutCarouselImgs} autoScroll/>
+                        <Carousel name="about" srcSet={aboutCarouselImgs} autoScroll hideButtons/>
                     </div>
                 </div>
             </div>
