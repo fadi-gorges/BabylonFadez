@@ -1,6 +1,6 @@
 "use client";
 import React, {useState} from "react";
-import {EnvelopeIcon, MapPinIcon, PhoneIcon} from "@heroicons/react/20/solid";
+import {ChevronDownIcon, EnvelopeIcon, MapPinIcon, PhoneIcon} from "@heroicons/react/20/solid";
 import StackDecor from "@components/StackDecor";
 
 interface ContactLocation {
@@ -35,33 +35,39 @@ const ContactCollapse = ({location, currentLocation}: {
     location: ContactLocation, currentLocation: {
         location: string, setLocation: React.Dispatch<React.SetStateAction<string>>
     }
-}) => (
-    <div className="collapse bg-base-200 mt-4">
-        <input id={`location-${location.location}`} type="checkbox"
-               checked={currentLocation.location === location.location}
-               onClick={() => currentLocation.setLocation(location.location)}/>
-        <div className="collapse-title text-base font-josefin font-extrabold text-gray-700">
-            {location.location}
+}) => {
+    const iconClasses = `h-6 transition ${currentLocation.location === location.location && 'opacity-0'}`
+
+    return (
+        <div className="collapse bg-gray-800 mt-4">
+            <input id={`location-${location.location}`} type="checkbox"
+                   checked={currentLocation.location === location.location}
+                   onClick={() => currentLocation.setLocation(location.location)}/>
+            <div
+                className="collapse-title text-base font-josefin font-extrabold text-gray-200 flex justify-between items-center">
+                <p>{location.location}</p>
+                <ChevronDownIcon className={iconClasses}/>
+            </div>
+            <div className="collapse-content flex flex-col gap-3">
+                <a href={location.addressUrl}
+                   className="flex items-center font-sans text-sm transition text-gray-200 hover:text-gray-500">
+                    <MapPinIcon className="text-yellow-600" width={30}/>
+                    <p className="ml-4">{location.address}</p>
+                </a>
+                <a href={`tel:${location.phone}`}
+                   className="flex items-center font-sans text-sm transition text-gray-200 hover:text-gray-500">
+                    <PhoneIcon className="text-yellow-600" width={30}/>
+                    <p className="ml-4">{location.phoneStr}</p>
+                </a>
+                <a href={`mailto:${location.email}`}
+                   className="flex items-center font-sans text-sm transition text-gray-200 hover:text-gray-500">
+                    <EnvelopeIcon className="text-yellow-600" width={30}/>
+                    <p className="ml-4">{location.email}</p>
+                </a>
+            </div>
         </div>
-        <div className="collapse-content flex flex-col gap-3">
-            <a href={location.addressUrl}
-               className="flex items-center font-sans text-sm transition hover:text-gray-500">
-                <MapPinIcon className="text-yellow-600" width={30}/>
-                <p className="ml-4">{location.address}</p>
-            </a>
-            <a href={`tel:${location.phone}`}
-               className="flex items-center font-sans text-sm transition hover:text-gray-500">
-                <PhoneIcon className="text-yellow-600" width={30}/>
-                <p className="ml-4">{location.phoneStr}</p>
-            </a>
-            <a href={`mailto:${location.email}`}
-               className="flex items-center font-sans text-sm transition hover:text-gray-500">
-                <EnvelopeIcon className="text-yellow-600" width={30}/>
-                <p className="ml-4">{location.email}</p>
-            </a>
-        </div>
-    </div>
-);
+    );
+}
 
 const Contact = () => {
     const [currentLocation, setCurrentLocation] = useState(contactLocations[0].location);
