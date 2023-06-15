@@ -51,19 +51,22 @@ const Services = () => {
                         </p>
                     </div>
                     <div className="col-span-12 xl:col-start-7 xl:col-span-6 pb-5 slideIn xl:delay-200">
-                        <StackDecor colorOne="bg-gray-900" colorTwo="bg-gray-700">
-                            <table className="table text-white border-separate rounded-2xl overflow-hidden font-judson
-                            text-base"
-                                   cellSpacing={0}>
-                                <tbody>
-                                {servicesList.map(({service, price}) => (
-                                    <tr key={service} className="odd:bg-gray-950 even:bg-gray-900">
-                                        <td className="px-5">{service}</td>
-                                        <td className="text-yellow-600 font-bold">${price}</td>
-                                    </tr>
-                                ))}
-                                </tbody>
-                            </table>
+                        <StackDecor colorOne="bg-gray-700" colorTwo="bg-gray-700">
+                            <div className="rounded-2xl overflow-hidden">
+                                <table className="table text-white border-separate font-sans
+                            text-sm"
+                                       cellSpacing={0}>
+                                    <tbody>
+                                    {servicesList.map(({service, price}) => (
+                                        <tr key={service} className="odd:bg-gray-700 even:bg-gray-600">
+                                            <td className="px-5 py-4">{service}</td>
+                                            <td className="text-amber-300 font-bold">${price}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </StackDecor>
                     </div>
                 </div>

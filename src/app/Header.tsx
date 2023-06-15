@@ -37,8 +37,8 @@ const Header = () => {
                                 </span>
                                 </h1>
                                 <button onClick={() => scrollIntoView("about")}
-                                        className="btn btn-lg bg-yellow-600 mt-5 lg:mt-3 rounded-full text-white hover:bg-yellow-800
-                                    border-none">
+                                        className="btn btn-lg bg-amber-400 mt-5 lg:mt-3 rounded-full text-white hover:bg-amber-500
+                                    border-none font-bold">
                                     About Us
                                     <ChevronDownIcon className="inline h-7"/>
                                 </button>

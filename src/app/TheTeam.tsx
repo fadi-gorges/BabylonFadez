@@ -31,7 +31,7 @@ const TheTeam = () => {
                     <div
                         className="col-span-12 xl:col-start-9 xl:col-span-4 text-black flex flex-col justify-center
                                 xl:items-end xl:text-end slideIn">
-                        <h2 className="text-2xl font-sans font-extrabold text-yellow-400 titleUnderlineRight after:bg-white">The
+                        <h2 className="text-2xl font-sans font-extrabold text-amber-300 titleUnderlineRight after:bg-white">The
                             Team</h2>
                         <p className="text-base mt-5 md:mt-10 font-judson leading-8 text-white">
                             We are fully devoted to advocating healthy hair and groomed lives with our pampering

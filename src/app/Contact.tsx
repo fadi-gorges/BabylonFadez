@@ -81,17 +81,17 @@ const ContactCollapse = ({location, currentLocation}: {
             <div className="collapse-content flex flex-col gap-3">
                 <a href={location.addressUrl}
                    className="flex items-center font-sans text-sm transition text-gray-200 hover:text-gray-500">
-                    <MapPinIcon className="text-yellow-600" width={30}/>
+                    <MapPinIcon className="text-amber-300" width={30}/>
                     <p className="ml-4">{location.address}</p>
                 </a>
                 <a href={`tel:${location.phone}`}
                    className="flex items-center font-sans text-sm transition text-gray-200 hover:text-gray-500">
-                    <PhoneIcon className="text-yellow-600" width={30}/>
+                    <PhoneIcon className="text-amber-300" width={30}/>
                     <p className="ml-4">{location.phoneStr}</p>
                 </a>
                 <a href={`mailto:${location.email}`}
                    className="flex items-center font-sans text-sm transition text-gray-200 hover:text-gray-500">
-                    <EnvelopeIcon className="text-yellow-600" width={30}/>
+                    <EnvelopeIcon className="text-amber-300" width={30}/>
                     <p className="ml-4">{location.email}</p>
                 </a>
             </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                     <div
                         className="col-span-12 xl:col-span-5 text-black flex flex-col justify-center">
                         <div
-                            className="flex justify-between items-center text-2xl font-sans font-extrabold text-yellow-400 slideIn">
+                            className="flex justify-between items-center text-2xl font-sans font-extrabold text-amber-300 slideIn">
                             <h2 className="titleUnderline after:bg-white">Visit Us</h2>
                             <div className="flex gap-3">
                                 <a href="https://www.instagram.com/babylonfadezbarbershop"
@@ -163,13 +163,13 @@ const Contact = () => {
                             <a className={activeTab === 'map' ? tabActive : tabInactive}
                                onClick={() => setActiveTab('map')}>Map</a>
                         </div>
-                        <table className="table text-white rounded-2xl overflow-hidden font-judson
-                            text-base mt-7" style={{display: activeTab === 'hours' ? 'table' : 'none'}}>
+                        <table className="table text-white rounded-2xl overflow-hidden font-sans
+                            text-sm mt-7" style={{display: activeTab === 'hours' ? 'table' : 'none'}}>
                             <tbody>
                             {openingHours.map(({day, hours}) => (
                                 <tr key={day} className="bg-gray-800 border-b-1 last:border-b-0 border-gray-900">
-                                    <td className="px-5">{day}</td>
-                                    <td className="px-5 text-yellow-600 font-bold text-end">{hours}</td>
+                                    <td className="px-5 py-4">{day}</td>
+                                    <td className="px-5 text-amber-300 font-bold text-end">{hours}</td>
                                 </tr>
                             ))}
                             </tbody>
