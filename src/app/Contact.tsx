@@ -178,12 +178,12 @@ const Contact = () => {
                             <div
                                 className={`w-full h-full ${currentLocation !== 'Casula' && 'hidden'}`}>
                                 <iframe
-                                    className="rounded-3xl w-full aspect-[6/4]"
+                                    className="rounded-3xl w-full aspect-square sm:aspect-[6/4]"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.947596607476!2d150.90294210000002!3d-33.9424759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129540f249c997%3A0x8805dea672cd2663!2sBabylon%20Fadez%20Barbershop%20Casula!5e0!3m2!1sen!2sau!4v1686737630066!5m2!1sen!2sau"
                                     loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
                             </div>
                             <div
-                                className={`w-full aspect-[6/4] ${currentLocation !== 'Liverpool' && 'hidden'}`}>
+                                className={`w-full aspect-square sm:aspect-[6/4] ${currentLocation !== 'Liverpool' && 'hidden'}`}>
                                 <iframe className="rounded-3xl w-full h-full"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.994675076327!2d150.90792871206705!3d-33.91553662137071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12951e9413540f%3A0x99bc738c1bd74b67!2sBabylon%20Fadez%20Barbershop%20Liverpool!5e0!3m2!1sen!2sau!4v1686738215759!5m2!1sen!2sau"
                                         loading="lazy"
