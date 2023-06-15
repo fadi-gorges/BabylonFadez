@@ -42,7 +42,7 @@ const Navbar = ({scroll}: { scroll: number }) => {
                                priority quality={100} style={{transform: `scale(${logoSize}%)`}}/>
                         <NavLink text="Services" to="services"/>
                         <NavLink text="Our Work" to="our-work"/>
-                        <NavLink text="Contact Us" to="contact"/>
+                        <NavLink text="Visit Us" to="contact"/>
                     </div>
                 </div>
             </nav>
@@ -61,7 +61,7 @@ const Navbar = ({scroll}: { scroll: number }) => {
                         <MobileNavLink text="The Team" to="the-team"/>
                         <MobileNavLink text="Services" to="services"/>
                         <MobileNavLink text="Our Work" to="our-work"/>
-                        <MobileNavLink text="Contact Us" to="contact"/>
+                        <MobileNavLink text="Visit Us" to="contact"/>
                     </ul>
                 </div>
             </nav>

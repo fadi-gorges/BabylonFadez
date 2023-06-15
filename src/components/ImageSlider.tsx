@@ -105,7 +105,7 @@ const ImageSlider = ({srcSet}: { srcSet: string[] }) => {
                                 key={src}
                                 className="carousel-item text-center relative w-52 h-52 lg:w-64 lg:h-64 snap-start"
                             >
-                                <Image src={src} alt="Haircut" width={400} height={400}
+                                <Image src={src} alt="Haircut" width={300} height={300}
                                        className="object-cover w-full h-full"
                                 />
                             </div>

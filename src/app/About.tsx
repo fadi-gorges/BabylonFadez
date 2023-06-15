@@ -16,7 +16,7 @@ const About = () => {
                 className="container mx-auto px-10 md:px-28 py-16 md:py-20">
                 <div className="grid grid-cols-12 gap-y-8">
                     <div className="col-span-12 xl:col-span-5 text-black flex flex-col justify-center">
-                        <h2 className="text-2xl font-josefin font-extrabold slideIn titleUnderline after:bg-yellow-600">About
+                        <h2 className="text-2xl font-sans font-extrabold slideIn titleUnderline after:bg-yellow-600">About
                             Us</h2>
                         <p className="text-base mt-5 md:mt-10 font-judson leading-8 slideIn xl:delay-100">
                             Babylon Fadez serves Casula and Liverpool. We can deal with all your hair style needs,

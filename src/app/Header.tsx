@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import Navbar from "@app/Navbar";
 import {ParallaxBanner} from "react-scroll-parallax";
-import {ArrowDownIcon} from "@heroicons/react/20/solid";
+import {ChevronDownIcon} from "@heroicons/react/20/solid";
 import {scrollIntoView} from "@components/Utils";
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
                                         className="btn btn-lg bg-yellow-600 mt-5 lg:mt-3 rounded-full text-white hover:bg-yellow-800
                                     border-none">
                                     About Us
-                                    <ArrowDownIcon className="inline h-8"/>
+                                    <ChevronDownIcon className="inline h-7"/>
                                 </button>
                             </div>
                         </div>

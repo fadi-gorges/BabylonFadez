@@ -28,7 +28,11 @@ const Utils = ({children}: { children: React.ReactNode }) => {
 export default Utils;
 
 export const scrollIntoView = (id: string) => {
-    document.getElementById(id)?.scrollIntoView(true)
+    document.getElementById(id)?.scrollIntoView({
+        block: "start",
+        inline: "nearest",
+        behavior: "smooth"
+    })
     const elem = document.activeElement;
     if (elem instanceof HTMLElement) {
         elem.blur();
