@@ -11,11 +11,16 @@ const Header = () => {
     return (
         <>
             <Navbar scroll={scrollProgress}/>
+            <video autoPlay loop muted playsInline
+                   className="absolute sm:hidden top-0 left-0 w-screen h-[120%] object-cover object-center -z-10">
+                <source src="/clip.mp4"/>
+            </video>
+            <div className="absolute sm:hidden top-0 left-0 w-screen h-[120%] bg-black/80 -z-10"/>
             <ParallaxBanner id="header" className="h-screen" layers={[
                 {
                     children: (
                         <video autoPlay loop muted playsInline
-                               className="w-full h-[120%] md:h-full object-cover object-center">
+                               className="w-full h-[120%] hidden sm:block sm:h-full object-cover object-center">
                             <source src="/clip.mp4"/>
                         </video>
                     ),
@@ -26,7 +31,7 @@ const Header = () => {
                 {
                     children: (
                         <div
-                            className="h-full w-full flex justify-center xl:justify-end xl:pr-72 bg-black/80 text-white">
+                            className="h-full w-full flex justify-center xl:justify-end xl:pr-72 sm:bg-black/80 text-white">
                             <div
                                 className="flex flex-col justify-center text-center items-center xl:items-end xl:text-end slideInFirst">
                                 <h1 className="text-3xl font-bungee font-semibold">
@@ -37,7 +42,7 @@ const Header = () => {
                                 </span>
                                 </h1>
                                 <button onClick={() => scrollIntoView("about")}
-                                        className="btn btn-lg bg-amber-400 mt-5 lg:mt-3 rounded-full text-white hover:bg-amber-500
+                                        className="btn btn-lg bg-amber-500 mt-5 lg:mt-3 rounded-full text-white hover:bg-amber-600
                                     border-none font-bold">
                                     About Us
                                     <ChevronDownIcon className="inline h-7"/>
