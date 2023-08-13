@@ -1,1 +1,3 @@
-Visit the running website [`here`](https://babylonfadez.vercel.app)
+## Babylon Fadez
+
+Visit the published website [`here`](https://babylonfadez.vercel.app)
